@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Olix Studio · Your website in 30 seconds</title>
+<meta name="description" content="Build an animated preview of your website in 30 seconds. Web studio based in Geneva, business sites delivered in 1 to 3 weeks.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Olix Studio · Your website in 30 seconds">
+<meta property="og:description" content="Build an animated preview of your website in 30 seconds.">
+<meta property="og:image" content="/brand/logo olix studio.jpeg">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="fr" href="https://olixstudio.ch/">
+<link rel="alternate" hreflang="en" href="https://olixstudio.ch/en/">
+</head>
+<body>
+<header class="hdr">
+  <a class="brand" href="#top" aria-label="Olix Studio, back to top"><i aria-hidden="true"></i>Olix Studio</a>
+  <a class="lang" href="/" aria-label="Passer au français">FR · EN</a>
+</header>
+
+<main class="wrap" id="top">
+  <section class="hero">
+    <span class="eyebrow">Web studio · Geneva</span>
+    <h1>Your business deserves a website that <span class="serif">sells.</span></h1>
+    <p>Build a preview of your website in 30 seconds, right here on your phone.</p>
+    <div class="row">
+      <a class="btn" href="#essayer">Try it now</a>
+      <a class="btn ghost" href="#formules">See pricing</a>
+    </div>
+  </section>
+
+  <section class="cfg" id="essayer" aria-labelledby="cfg-title">
+    <div class="cfg-head">
+      <span class="eyebrow">Try it</span>
+      <h2 id="cfg-title">Your website in <span class="serif">30 seconds</span></h2>
+    </div>
+
+    <div class="stage" id="stage">
+      <div class="scene" id="scene" data-type="barbier" role="img" aria-label="Animated preview of your website">
+        <div class="g g-glow"></div>
+        <div class="g g-barbier"><i></i><i></i></div>
+        <svg class="g g-cafe" viewBox="0 0 200 200" aria-hidden="true"><path d="M60 190c-22-30 22-50 0-80s22-50 0-80"/><path d="M105 190c-22-30 22-50 0-80s22-50 0-80"/><path d="M150 190c-22-30 22-50 0-80s22-50 0-80"/></svg>
+        <svg class="g g-restaurant" viewBox="0 0 300 300" aria-hidden="true"><circle cx="150" cy="150" r="146"/><circle cx="150" cy="150" r="112"/><circle cx="150" cy="150" r="78"/></svg>
+        <div class="g g-autre"></div>
+        <div class="sc-top"><span class="sc-kick" id="sKick">Barber · Geneva</span><span class="sc-tag">Preview</span></div>
+        <div class="sc-main" id="sMain">
+          <div class="sc-name f-sans" id="sName"></div>
+          <p class="sc-line" id="sTitle">Precision with every blade.</p>
+          <div class="sc-row" id="sRow"><span class="sc-cta" id="sBtn">Book now</span><span class="sc-url"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span id="sUrl">chezmarco.ch</span></span></div>
+        </div>
+        <div class="sc-ticker" aria-hidden="true"><div class="tk" id="sTicker"></div></div>
+        <div class="wipe" id="wipe" aria-hidden="true"><svg viewBox="0 0 48 48" id="wipeIcon"></svg></div>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="step">
+        <div class="step-h"><span>1</span><h3>Your business</h3></div>
+        <div class="chips" role="group" aria-label="Business type">
+          <button class="chip" data-type="barbier" aria-pressed="true"><svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="19" rx="3"/><path d="M9 7l6 3M9 12l6 3M9 17l6 3"/></svg>Barber</button>
+          <button class="chip" data-type="cafe" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3c-.8 1 .8 2 0 3M12 3c-.8 1 .8 2 0 3"/></svg>Café</button>
+          <button class="chip" data-type="restaurant" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M3 17h18"/><path d="M5 17a7 7 0 0 1 14 0"/><path d="M12 8V6M10.5 6h3"/></svg>Restaurant</button>
+          <button class="chip" data-type="autre" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M3 10l1.5-5h15L21 10"/><path d="M4 10v10h16V10"/><path d="M3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/></svg>Other</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-h"><span>2</span><h3>Your business name</h3></div>
+        <div class="field">
+          <label for="nameIn">It appears live on the site</label>
+          <input class="input" id="nameIn" type="text" maxlength="28" autocomplete="organization" placeholder="E.g. Chez Marco" enterkeyhint="done">
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-h"><span>3</span><h3>The mood</h3></div>
+        <div class="moods" role="group" aria-label="Mood">
+          <button class="mood" data-mood="elegant" aria-pressed="true"><i style="background:linear-gradient(90deg,#121115 0 50%,#1d1b21 50%)"></i>Elegant</button>
+          <button class="mood" data-mood="chaleureux" aria-pressed="false"><i style="background:linear-gradient(90deg,#2a1d16 0 50%,#3a281e 50%)"></i>Warm</button>
+          <button class="mood" data-mood="moderne" aria-pressed="false"><i style="background:linear-gradient(90deg,#f6f4f1 0 50%,#e4e0da 50%)"></i>Modern</button>
+        </div>
+      </div>
+
+      <div class="result">
+        <p class="pick" id="pick">Recommended plan: <b>Pro</b> · from CHF 850</p>
+        <p class="note" id="pickWhy">Online booking, service menu and Google listing.</p>
+        <div class="row">
+          <a class="btn" href="#contact" id="want">I want one like this</a>
+          <a class="btn ghost" id="demoLink" href="https://fadedistrict1.netlify.app/" target="_blank" rel="noopener">See the full demo</a>
+        </div>
+        <p class="note">Indicative preview. The demos are concept projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="proj-title">
+    <span class="eyebrow">Concept projects</span>
+    <h2 id="proj-title">Three businesses, <span class="serif">three styles</span></h2>
+    <div class="rail"></div>
+  </section>
+
+  <section class="sec" id="formules" aria-labelledby="plans-title">
+    <span class="eyebrow">Plans</span>
+    <h2 id="plans-title">Clear <span class="serif">pricing</span></h2>
+    <span class="launch">Launch pricing · first 5 clients</span>
+    <div class="plans">
+      <article class="plan" data-plan="Essential">
+        <h3>Essential</h3>
+        <div class="price">from <b>CHF 500</b><s>CHF 900</s></div>
+        <ul><li>1 complete page</li><li>Hours, menu, contact</li><li>WhatsApp button</li><li>Delivered in 1 week</li></ul>
+        <a class="btn choose" href="#contact">Choose</a>
+      </article>
+      <article class="plan reco" data-plan="Pro">
+        <span class="badge">Recommended</span>
+        <h3>Pro</h3>
+        <div class="price">from <b>CHF 850</b><s>CHF 1'200</s></div>
+        <ul><li>Up to 5 pages</li><li>Online booking</li><li>Google listing, FR + EN</li><li>Delivered in 2 weeks</li></ul>
+        <a class="btn choose" href="#contact">Choose</a>
+      </article>
+      <article class="plan" data-plan="Premium">
+        <h3>Premium</h3>
+        <div class="price">from <b>CHF 1'700</b><s>CHF 2'000</s></div>
+        <ul><li>Up to 8 pages</li><li>You update the menu yourself</li><li>Up to 4 languages</li><li>Delivered in 3 weeks</li></ul>
+        <a class="btn choose" href="#contact">Choose</a>
+      </article>
+    </div>
+    <p class="note">Maintenance from CHF 50/month.</p>
+  </section>
+
+  <section class="sec" id="contact" aria-labelledby="contact-title">
+    <span class="eyebrow">Contact</span>
+    <h2 id="contact-title">Let's talk about <span class="serif">your</span> site</h2>
+    <form class="form" id="form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="contact">
+      <p style="position:absolute;left:-9999px" aria-hidden="true"><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field"><label for="fName">Your first name</label><input class="input" id="fName" name="prenom" type="text" autocomplete="given-name" placeholder="Marco"></div>
+      <div class="field"><label for="fShop">Business</label><input class="input" id="fShop" name="commerce" type="text" placeholder="Chez Marco"></div>
+      <div class="field"><label for="fType">Business type</label>
+        <select class="input" id="fType" name="activite"><option>Barber</option><option>Café</option><option>Restaurant</option><option>Other</option></select></div>
+      <div class="field"><label for="fPlan">Plan</label>
+        <select class="input" id="fPlan" name="formule"><option>Essential</option><option selected>Pro</option><option>Premium</option><option>Not sure yet</option></select></div>
+      <div class="field"><label for="fMsg">Message</label><textarea class="input" id="fMsg" name="message" placeholder="Your question or your project"></textarea></div>
+      <button class="btn" type="submit">Send</button>
+      <p class="note" id="formErr" hidden>Please provide at least your first name and business.</p>
+    </form>
+    <div class="sent" id="sent" hidden><b>Request sent</b><span class="note">Thank you! We'll get back to you very soon, by email or WhatsApp.</span></div>
+    <div class="contact-lines">
+      <span>WhatsApp: <b>+41 79 512 15 70</b></span>
+      <span>Email: <b>contact@olixstudio.ch</b></span>
+    </div>
+  </section>
+
+  <footer><span>© Olix Studio · Geneva</span><a href="/en/confidentialite.html">Privacy</a></footer>
+</main>
+
+<script type="module" src="/src/js/main-en.js"></script>
+</body>
+</html>

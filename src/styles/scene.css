@@ -1,0 +1,102 @@
+/* Configurator */
+.cfg{padding-block:24px 40px;display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+.cfg-head{display:grid;gap:8px}
+.cfg-head h2{font-size:clamp(30px,8vw,52px)}
+.stage{position:sticky;top:calc(var(--hdr) + env(safe-area-inset-top,0px));z-index:5;
+  margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:0 0 14px;background:linear-gradient(var(--night) 85%,transparent)}
+/* The scene: a living poster of the visitor's business, edge to edge */
+.scene{position:relative;height:min(56svh,520px);overflow:hidden;display:flex;flex-direction:column;isolation:isolate;
+  background:var(--s-bg);color:var(--s-ink);transition:background .5s,color .5s}
+.g{position:absolute;pointer-events:none;opacity:0;transition:opacity .6s;z-index:0}
+.g-glow{inset:0;opacity:1;background:radial-gradient(70% 55% at 88% 8%,color-mix(in srgb,var(--s-accent) 38%,transparent),transparent 70%),
+  radial-gradient(60% 40% at 0% 100%,color-mix(in srgb,var(--s-accent) 16%,transparent),transparent 70%)}
+.g-barbier{inset:0}
+.g-barbier i{position:absolute;left:-30%;width:160%;height:24%;top:4%;transform:rotate(-14deg);display:block;opacity:.24;
+  background:repeating-linear-gradient(90deg,var(--s-accent) 0 12px,transparent 12px 30px);animation:pole 1.4s linear infinite}
+.g-barbier i+i{top:29%;height:9%;opacity:.12;animation-direction:reverse;animation-duration:2.2s}
+@keyframes pole{to{background-position:30px 0}}
+.g-cafe{right:2%;top:2%;width:48%;height:auto;fill:none;stroke:var(--s-accent);stroke-width:7;stroke-linecap:round}
+.g-cafe path{animation:wisp 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom;opacity:0}
+.g-cafe path:nth-child(2){animation-delay:-1.2s}
+.g-cafe path:nth-child(3){animation-delay:-2.4s}
+@keyframes wisp{0%{opacity:0;transform:translateY(24%) scaleY(.8)}35%{opacity:.65}100%{opacity:0;transform:translateY(-22%) scaleY(1.1)}}
+.g-restaurant{right:-30%;top:-24%;width:90%;height:auto;fill:none;stroke:var(--s-accent);animation:spin 60s linear infinite}
+.g-restaurant circle:nth-child(1){stroke-width:1.5;stroke-dasharray:1 9}
+.g-restaurant circle:nth-child(2){stroke-width:2.5;stroke-dasharray:46 14}
+.g-restaurant circle:nth-child(3){stroke-width:1;stroke-dasharray:3 6}
+@keyframes spin{to{transform:rotate(360deg)}}
+.g-autre{inset:0;background-image:radial-gradient(circle,var(--s-accent) 1.4px,transparent 1.9px);background-size:20px 20px;
+  -webkit-mask:radial-gradient(circle,#000,transparent 65%) 0 0/80% 90% no-repeat;mask:radial-gradient(circle,#000,transparent 65%) 0 0/80% 90% no-repeat;
+  animation:roam 7s ease-in-out infinite alternate}
+@keyframes roam{to{-webkit-mask-position:100% 60%;mask-position:100% 60%}}
+.scene[data-type="barbier"] .g-barbier,.scene[data-type="cafe"] .g-cafe,.scene[data-type="autre"] .g-autre{opacity:1}
+.scene[data-type="restaurant"] .g-restaurant{opacity:.6}
+.sc-top{position:relative;z-index:1;flex:none;display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:16px max(18px,env(safe-area-inset-left,0px)) 0}
+.sc-kick{font:600 12px var(--f-body);letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:8px;opacity:.8}
+.sc-kick::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--s-accent);flex:none}
+.sc-tag{font:600 11px var(--f-body);letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:99px;
+  border:1px solid color-mix(in srgb,var(--s-ink) 28%,transparent)}
+.sc-main{position:relative;z-index:1;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;
+  padding:0 max(18px,env(safe-area-inset-left,0px)) 16px}
+.sc-name{line-height:.92;width:100%;font-size:64px}
+.sc-name .w{display:inline-block;white-space:nowrap}
+.sc-name .c{display:inline-block}
+.sc-name .c.in{animation:drop .55s cubic-bezier(.2,.9,.25,1.25) both;animation-delay:calc(var(--k) * 32ms)}
+@keyframes drop{from{opacity:0;transform:translateY(.45em) rotate(10deg) scale(.9)}}
+.sc-line{margin:0;font-size:15px;line-height:1.35;opacity:.82;max-width:30ch}
+.sc-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.sc-cta{background:var(--s-accent);color:var(--s-accent-ink);font:600 14px var(--f-body);padding:11px 16px;border-radius:12px;transition:background .5s}
+.sc-url{display:inline-flex;align-items:center;gap:6px;font:500 13px var(--f-body);opacity:.75;min-width:0}
+.sc-url svg{width:12px;height:12px;flex:none;stroke:currentColor;fill:none;stroke-width:2}
+.sc-ticker{position:relative;z-index:1;flex:none;height:44px;overflow:hidden;display:flex;align-items:center;
+  border-top:1px solid color-mix(in srgb,var(--s-ink) 14%,transparent)}
+.tk{display:flex;width:max-content;animation:marq 24s linear infinite}
+.tk-half{display:flex;align-items:center;gap:18px;padding-right:18px;white-space:nowrap;font:500 14px var(--f-body)}
+.tk-half b{font-weight:700}
+.tk-half i{font-style:normal;color:var(--s-accent)}
+@keyframes marq{to{transform:translateX(-50%)}}
+.wipe{position:absolute;inset:0;z-index:5;background:var(--w,#ff9f43);clip-path:inset(0 100% 0 0);display:grid;place-items:center;pointer-events:none}
+.wipe svg{width:26%;max-width:120px;height:auto;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.wipe.go{animation:wipe .8s cubic-bezier(.7,0,.3,1) both}
+@keyframes wipe{0%{clip-path:inset(0 100% 0 0)}45%,55%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 100%)}}
+.f-sans{font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.02em}
+.f-serif{font-family:var(--f-serif);font-style:italic;font-weight:400}
+.f-serif-up{font-family:var(--f-serif);font-weight:400}
+.f-modern{font-family:var(--f-display);font-weight:700;letter-spacing:-.03em}
+
+.controls{display:grid;gap:14px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:12px}
+.step-h{display:flex;align-items:baseline;gap:10px}
+.step-h span{font-family:var(--f-display);font-weight:800;color:var(--amber);font-size:14px}
+.step-h h3{font-size:19px;letter-spacing:-.01em;font-weight:700}
+.chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.chip{display:flex;align-items:center;gap:10px;min-height:52px;padding:0 14px;border-radius:14px;border:1px solid var(--line);background:var(--panel-2);
+  color:var(--text);font:500 16px var(--f-body);cursor:pointer;text-align:left;transition:border-color .2s,background .2s}
+.chip svg{width:22px;height:22px;flex:none;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;color:var(--muted)}
+.chip[aria-pressed="true"]{border-color:var(--amber);background:color-mix(in srgb,var(--amber) 12%,var(--panel-2))}
+.chip[aria-pressed="true"] svg{color:var(--amber)}
+.field{display:grid;gap:6px}
+.field label{font-size:13px;color:var(--muted)}
+.input{width:100%;min-height:52px;border-radius:14px;border:1px solid var(--line);background:var(--panel-2);color:var(--text);font:500 16px var(--f-body);padding:0 14px}
+.input:focus{outline:2px solid var(--amber);outline-offset:1px}
+.moods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.mood{display:grid;gap:8px;justify-items:center;padding:12px 6px;min-height:52px;border-radius:14px;border:1px solid var(--line);background:var(--panel-2);color:var(--text);font:500 14px var(--f-body);cursor:pointer}
+.mood i{width:100%;max-width:64px;height:22px;border-radius:7px;display:block}
+.mood[aria-pressed="true"]{border-color:var(--amber)}
+.result{background:linear-gradient(160deg,color-mix(in srgb,var(--amber) 16%,var(--panel)),var(--panel));border:1px solid color-mix(in srgb,var(--amber) 40%,var(--line));border-radius:var(--r);padding:18px;display:grid;gap:12px}
+.result p{margin:0}
+.result .pick{font-family:var(--f-display);font-weight:700;font-size:20px}
+.result .pick b{color:var(--amber)}
+.result .row{display:flex;gap:10px;flex-wrap:wrap}
+.note{font-size:13px;color:var(--muted);margin:0}
+
+@media (min-width:860px){
+  .cfg{grid-template-columns:minmax(0,420px) minmax(0,1fr);grid-template-areas:"head head" "stage controls";column-gap:48px;align-items:start}
+  .cfg-head{grid-area:head}
+  .stage{grid-area:stage;top:calc(var(--hdr) + 24px);background:none}
+  .controls{grid-area:controls}
+  .scene{height:min(78vh,620px);border-radius:24px}
+  .stage{margin-inline:0}
+}
+@media (max-width:859px) and (max-height:700px){.scene{height:50svh}}

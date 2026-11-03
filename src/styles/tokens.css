@@ -1,0 +1,56 @@
+@font-face{
+  font-family:"Bricolage Grotesque";
+  font-style:normal;
+  font-weight:500 800;
+  font-display:swap;
+  src:url("/fonts/bricolage-grotesque-variable.woff2") format("woff2");
+}
+@font-face{
+  font-family:"Figtree";
+  font-style:normal;
+  font-weight:400 600;
+  font-display:swap;
+  src:url("/fonts/figtree-variable.woff2") format("woff2");
+}
+@font-face{
+  font-family:"Instrument Serif";
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url("/fonts/instrument-serif-normal-400.woff2") format("woff2");
+}
+@font-face{
+  font-family:"Instrument Serif";
+  font-style:italic;
+  font-weight:400;
+  font-display:swap;
+  src:url("/fonts/instrument-serif-italic-400.woff2") format("woff2");
+}
+
+:root{
+  color-scheme: dark;
+  --night:#0b0b0f; --panel:#15151c; --panel-2:#1c1c26; --line:#2b2b38;
+  --text:#f2f0ea; --muted:#a6a3b0; --amber:#ff9f43; --amber-ink:#1a1006;
+  --violet:#8b6cf0; --blue:#4a63e8;
+  --ring:linear-gradient(135deg,var(--blue),var(--violet) 55%,var(--amber));
+  --f-display:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --f-serif:"Instrument Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hdr:60px;
+  --r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--text);font-family:var(--f-body);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--night)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1080px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;letter-spacing:-.02em;line-height:1.02;text-wrap:balance;margin:0}
+.serif{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:0}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
