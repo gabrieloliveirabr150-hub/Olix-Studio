@@ -70,7 +70,7 @@ export const fr = {
     indicative: 'Aperçu indicatif. Les démos sont des projets conceptuels.'
   },
   // Message prérempli dans le formulaire au clic sur « J'en veux un comme ça ».
-  wantMessage: moodLabel => `Je voudrais un site comme l'aperçu : ambiance ${moodLabel}.`,
+  wantMessage: moodLabel => `Je voudrais un site comme l’aperçu : ambiance ${moodLabel}.`,
   wantMoods: { elegant: 'élégante', chaleureux: 'chaleureuse', moderne: 'moderne' },
   projets: {
     eyebrow: 'Projets conceptuels',
