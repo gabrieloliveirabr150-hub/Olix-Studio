@@ -11,3 +11,6 @@
   background:var(--amber);color:var(--amber-ink);font:600 16px/1 var(--f-body);text-decoration:none;cursor:pointer;transition:transform .2s ease}
 .btn:active{transform:scale(.97)}
 .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+
+/* L’attribut hidden doit toujours gagner sur les display des composants (ex. .sent). */
+[hidden]{display:none!important}
