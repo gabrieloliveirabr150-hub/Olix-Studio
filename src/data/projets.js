@@ -25,5 +25,14 @@ export const projets = [
     fond: "#6e2c1f",
     icone: "restaurant",
     image: null
+  },
+  {
+    nom: "LE COIN.",
+    type: { fr: "Tabac & épicerie · vitrine de quartier", en: "Tobacconist & grocery · neighbourhood shop" },
+    url: "https://le-coin.netlify.app",
+    accent: "#C8B99E",
+    fond: "#203D32",
+    icone: "epicerie",
+    image: "/projets/le-coin.webp"
   }
 ];
