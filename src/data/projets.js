@@ -6,7 +6,7 @@ export const projets = [
     accent: "#c9a45c",
     fond: "#5a4826",
     icone: "barbier",
-    image: null
+    image: "/projets/fadedistrict.webp"
   },
   {
     nom: "Maison du Café",
@@ -15,7 +15,7 @@ export const projets = [
     accent: "#e0a06a",
     fond: "#6b3f1f",
     icone: "cafe",
-    image: null
+    image: "/projets/maison-du-cafe.webp"
   },
   {
     nom: "Maison Épuré",
@@ -24,7 +24,7 @@ export const projets = [
     accent: "#e07a62",
     fond: "#6e2c1f",
     icone: "restaurant",
-    image: null
+    image: "/projets/maison-epure.webp"
   },
   {
     nom: "LE COIN.",

@@ -71,8 +71,8 @@ export const en = {
   wantMoods: { elegant: 'elegant', chaleureux: 'warm', moderne: 'modern' },
   projets: {
     eyebrow: 'Concept projects',
-    titleStart: 'Three businesses, ',
-    titleEmphasis: 'three styles',
+    titleStart: 'Four shops, ',
+    titleEmphasis: 'four styles',
     etiquette: 'Concept project'
   },
   formules: {

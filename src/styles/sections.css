@@ -43,6 +43,6 @@ footer{padding-block:40px calc(28px + env(safe-area-inset-bottom,0px));color:var
 
 @media (min-width:860px){
   .hero{padding-block:72px 40px}
-  .rail{grid-auto-flow:row;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;margin-inline:0;padding-inline:0}
+  .rail{grid-auto-flow:row;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));overflow:visible;margin-inline:0;padding-inline:0}
   .plans{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
 }
